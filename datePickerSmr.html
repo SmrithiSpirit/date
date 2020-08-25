@@ -71,11 +71,13 @@
 
  <script type="text/javascript">
         $(function () {
+	var date = new Date();
+	date.setDate(date.getDate()+1);
             $('#datetimepicker12').datetimepicker({
                 inline: true,
                 format: 'LD',
                 sideBySide: true,
-		minDate: new date()
+		minDate: date
             });
         });
        
