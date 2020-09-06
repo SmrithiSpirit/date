@@ -23,7 +23,7 @@
         $(function () {
             $("#submit").click(function () {
                 var date = $("#datetimepicker12").data("DateTimePicker").date().toLocaleString()
-                console.log(date)
+                console.log(date + 30)
                     window.parent.postMessage(JSON.stringify({
                         event_code: 'ym-client-event', data: JSON.stringify({
                             event: {
