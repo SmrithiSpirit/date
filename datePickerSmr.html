@@ -71,19 +71,19 @@
 
  <script type="text/javascript">
         $(function () {
-	var date = new Date();
-	date.setDate(date.getDate()+1);
-            $('#datetimepicker12').datetimepicker({
-                inline: true,
-                format: 'YYYY-MM-DD',
-                sideBySide: true,
-		maxDate : new Date(),
-		minDate: 0
-            });
-        });
-       
-    </script>
-
-		
+	var start_date = new Date();
+	var end_date = new Date();
+	start_date.setDate(start_date.getDate()+1);
+	end_date.setDate(end_date.getDate()+30);
+	console.log(end_date)
+	$('#datetimepicker12').datetimepicker({
+		inline: true,
+		format: 'YYYY-MM-DD',
+		sideBySide: true,
+		minDate :start_date,
+		maxDate : end_date
+	    });
+	});
+    </script>	
 </body>
 </html>
