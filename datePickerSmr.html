@@ -77,8 +77,14 @@
                 inline: true,
                 format: 'YYYY-MM-DD',
                 sideBySide: true,
-		minDate: date,
-		maxDate: '30d'
+		minDate: '-30d',
+			        maxDate: '+0d',
+		        onSelect: function(dateStr) {
+	
+		            var max = $(this).datepicker('getDate'); // Selected date or null if none
+		            $('#datepicker1').datepicker('option', {maxDate: new Date(max.getTime()-(1000*60*60*24)) });
+	
+		        }
             });
         });
        
