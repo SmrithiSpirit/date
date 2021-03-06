@@ -23,8 +23,8 @@
         $(function () {
             $("#submit").click(function () {
                 var date = $("#datetimepicker12").data("DateTimePicker").date()
-		let selectedDate = moment(date,"MM-DD-YYYY");
-                console.log(selectedDate.toISOString())
+		//let selectedDate = moment(date,"MM-DD-YYYY");
+                console.log(date)
                     window.parent.postMessage(JSON.stringify({
                         event_code: 'ym-client-event', data: JSON.stringify({
                             event: {
@@ -51,7 +51,7 @@
 				inline: true,
 				sideBySide: true,
 				locale: 'de',
-				format: 'DD.MM.YYYY'
+				format: 'yyyy-mm-ddThh:ii:ssZ'
 			});
 		});
 	</script>
