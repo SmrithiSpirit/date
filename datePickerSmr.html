@@ -22,7 +22,7 @@
     <script type="text/javascript">
         $(function () {
             $("#submit").click(function () {
-                var date = $("#datetimepicker12").data("DateTimePicker")
+                var date = $("#datetimepicker12").data("DateTimePicker").date()
                 console.log(date + 30)
                     window.parent.postMessage(JSON.stringify({
                         event_code: 'ym-client-event', data: JSON.stringify({
