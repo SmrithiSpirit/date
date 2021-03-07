@@ -24,7 +24,7 @@
             $("#submit").click(function () {
                 //var date = $("#datetimepicker12").data("DateTimePicker").date()
 		//let selectedDate = moment(date,"MM-DD-YYYY");
-		    var date = $("#datetimepicker12").find('div').val()
+		    var date = $("#datetimepicker12").data("DateTimePicker").date().toISOString();
                 console.log(date)
                     window.parent.postMessage(JSON.stringify({
                         event_code: 'ym-client-event', data: JSON.stringify({
